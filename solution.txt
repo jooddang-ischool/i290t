@@ -1,0 +1,51 @@
+I found an educational dataset here: http://teacherwiki.assistment.org/wiki/Assistments_2009-2010_Full_Dataset
+When you unzip the downloadable zip file, you can find a csv file, which holds experiment dataset of students solving mathematics problems. It shows which students solved which problems, and which skills were needed to solve the problem, and who is the teacher of the student, what class the student belonged to, and other related information.
+It holds 1011079 transactional data - one row means a try of a student to solve a problem.
+Actually, there is not one interesting record. But, if you make a simple script and sort the dataset by student id to find correct percentage of each student, you can find many students solving 100% correct. On the other hand, there are many students who couldn't solve any problem (0% correct) as well.
+
+* 3 questions I can answer.
+Q1. What were the ID's of the top 5 and bottom 5 performing students (by % correct)
+Top 5 user IDs and correct percentage: 
+71823 : 100.0 %
+84692 : 100.0 %
+85354 : 100.0 %
+82224 : 100.0 %
+82227 : 100.0 %
+
+Bottom 5 user IDs and correct percentage: 
+90645 : 0.0 %
+85124 : 0.0 %
+91069 : 0.0 %
+83615 : 0.0 %
+80101 : 0.0 %
+
+Q2. What were the 5 easiest problems and 5 most difficult problems (by % correct)
+Top 5 easiest problems and correct percentage: 
+80590 : 100.0 %
+80594 : 100.0 %
+80596 : 100.0 %
+113015 : 100.0 %
+35548 : 100.0 %
+
+Top 5 most difficult problems and correct percentage: 
+45446 : 0.0 %
+45440 : 0.0 %
+48626 : 0.0 %
+176682 : 0.0 %
+112952 : 0.0 %
+
+Q3. What were the 5 easiest and most difficult skills?
+Top 5 easiest skills and correct percentage: 
+Median : 82.9268292683 %
+Finding y-intercept from Linear Equation : 84.2105263158 %
+Similar Figures : 85.5421686747 %
+Exponents : 89.8550724638 %
+Properties and Classification Rectangular Prisms : 93.0036188179 %
+
+Top 5 most difficult skills and correct percentage: 
+Table : 14.7826086957 %
+Pythagorean Theorem : 15.625 %
+Quadratic Equation Solving : 21.1111111111 %
+Percent Discount : 22.8070175439 %
+Parallel and Perpendicular Lines : 30.9764309764 %
+
