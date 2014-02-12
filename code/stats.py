@@ -41,7 +41,8 @@ print "Median: %s" % (sorted_amount[len(sorted_amount) / 2])
 # for elem in sorted_amount:
 #     squareData += (elem - mean) ** 2
 squareData = get_square_data(sorted_amount, mean)
-print "Standard Deviation: %s" % ((squareData / len(sorted_amount)) ** 0.5)
+sd = (squareData / len(sorted_amount)) ** 0.5
+print "Standard Deviation: %s" % sd
 
 ##### Comma separated list of unique candidate ID numbers
 print "Candidates: "
@@ -85,4 +86,5 @@ for elem in candidateIds.keys():
     print "Median: ", (sorted_per_candi[len(sorted_per_candi) / 2])
     squareData = get_square_data(sorted_per_candi, mean_per_candi)
     print "Standard Deviation: ", ((squareData / len(sorted_per_candi)) ** 0.5)
-    print "z-score: "
+    print "z-score: ", ((sum_per_candi - mean) / sd)
+    print " "
