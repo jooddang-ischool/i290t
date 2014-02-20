@@ -18,6 +18,12 @@ class UniqueReview(MRJob):
             # for word in ____:
             #   yield [ ___ , ___ ]
             ##/
+            text = record['text']
+            texts = re.split('\n|\"| ', text)
+            review_id = record['review_id']
+            for word in texts:
+                if word is not '':
+                    yield [word, review_id]
 
     def count_reviews(self, word, review_ids):
         """Count the number of reviews a word has appeared in.  If it is a
@@ -30,6 +36,8 @@ class UniqueReview(MRJob):
         # if ___:
         #     yield [ ___ , ___ ]
         ##/
+        if len(unique_reviews) == 1:
+            yield[unique_reviews.pop(), 1]
 
     def count_unique_words(self, review_id, unique_word_counts):
         """Output the number of unique words for a given review_id"""
@@ -37,6 +45,7 @@ class UniqueReview(MRJob):
         # TODO: summarize unique_word_counts and output the result
         #
         ##/
+        yield[review_id, sum(unique_word_counts)]
 
     def aggregate_max(self, review_id, unique_word_count):
         """Group reviews/counts together by the MAX statistic."""
@@ -45,6 +54,7 @@ class UniqueReview(MRJob):
         # the same reducer:
         # yield ["MAX", [ ___ , ___]]
         ##/
+        yield['MAX', [unique_word_count, review_id]]
 
     def select_max(self, stat, count_review_ids):
         """Given a list of pairs: [count, review_id], select on the pair with
@@ -55,6 +65,14 @@ class UniqueReview(MRJob):
         # number
         #
         #/
+        max_id = ''
+        max_count = 0
+        for count, review_id in count_review_ids:
+            if count > max_count:
+                max_id = review_id
+                max_count = count
+        print 'max id = ', max_id, ', and count = ', max_count
+        yield [max_id, max_count]
 
     def steps(self):
         """TODO: Document what you expect each mapper and reducer to produce:
