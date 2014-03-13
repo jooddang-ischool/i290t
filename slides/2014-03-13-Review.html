@@ -160,101 +160,154 @@ class: left, top, inverse
 
 ---
 
-## Lab: Data Stats
-
-  + Obtain federal [campaign finance data](ftp://ftp.fec.gov/FEC/2012/pas212.zip)
-  + Reference the [data dictionary](http://www.fec.gov/finance/disclosure/metadata/DataDictionaryContributionstoCandidates.shtml)
-  + Decompress
-  + Manually check
-  + Run ```code/stats.py```
-  + Edit ```code/stats.py``` to add functionality
-  + Pull Request submission
+# Review
 
 ---
 
-## Data
+## Review
 
-  + [Campaign finance data](ftp://ftp.fec.gov/FEC/2012/pas212.zip)
-  + The [data dictionary](http://www.fec.gov/finance/disclosure/metadata/DataDictionaryContributionstoCandidates.shtml) tells you the format of the data
-  + Decompress and investigate using the tools we discussed
-
----
-
-## Code
-
-```bash
-$ git checkout master
-$ git pull jretz master
-$ git checkout -b hw-stats
-```
-  + Run and edit ```code/stats.py```
+  + Midterm target length: 1.5 hours
+  + Time limit: 3 hours
+  + 1 cheat sheet, 8.5 x 11
+  + Calculators OK, not required
+  + Questions from slides have a higher probability of appearing
+  + Questions from the reading are fair game
 
 ---
 
-## Stats
+## Case Studies
 
-  + Minimum
-  + Maximum
-  + Mean
-  + Median
-  + Standard Deviation
-  + Candidates
-  + Normalized sample contributions
+  + Example of "transactional data"
+  + Example of non-transactional data
 
 ---
 
-## Extra credit
+## Obtaining Data
 
-  + Extra credit is used to get you *up to 100%*
-  + On the *current assignment*
-  + Also helpful for learning topics more in depth
-  + You may do partial extra credit
-
-???
-
-## Overall Extra Credit
-
-  + Extra credit that applies to overall grade will not be assigned
+  + Trade-offs of dataset vs API?
+  + Trade-offs of operational database vs data warehouse
+  + Unix commands to explore data?
 
 ---
 
-## Extra Credit
-  + Stats per candidate
-  + z-score
+## Probability
+
+  + Other names for a Feature
+  + Difference between Discrete and Continuous feature
+  + What type of feature is day of the week?
+  + Ways to measure central tendency?
+  + What is skew?
+  + When is asymmetric binary dissimilarity useful?
+  + How to calculate L<sub>2</sub> norm of two points?
+  + What is cosine similarity?
 
 ---
 
-## Git usage
+## Preprocessing
 
-  + All edits, commits, pushes should happen on a ```hw-``` or ```project``` branch
-  + ```git status```
-  + All pulls (typically from ```jretz```) should happen on ```master``` branch
-  + If you use an editor connected to ischool server, make sure you are
-    *either* editing *or* using git
-
-???
-
-## Exceptions
-
-  + There are exceptions but know what you're trying to do
-  + External editors can write back files *after* you've changed git branches
+  + When storing the same fact in different ways, what type of problem is
+    likely?
+  + Can data corruption happen with no mistakes and no bugs?
+  + What are some options to deal with missing values?
+  + What are some options to deal with outliers?
+  + What does correlation imply?
 
 ---
 
-## Submission
+## Data Warehouse
 
-  + GitHub pull request
-  + If something is going wrong, submit by email: jretz@ischool,
-    shreyas@ischool
-  + We'll help you submit the pull request, but you'll get full credit
+  + OLAP vs OLTP
+  + Examples of database metadata?
+  + What is a data multi-cube?
+  + What is at the center of a star schema?
+  + What is the tradeoff being made in dimension tables?
+  + Define:
+    + Rollup
+    + Drill-down
+    + Slice
+    + Dice
+    + Pivot
 
-???
+---
 
-## Submission
+## MapReduce
 
-  + The pull request is a way for Shreyas and I to easily see changes, grade
-  + It'll give you good experience, but it is not a fundamental skill of the
-    class, so I'm not too worried about it
+  + What tradeoff are we making with MapReduce?
+  + Why is log processing a typical use of MapReduce?
+  + What types of processing are not well suited?
+  + For a multi-step job, the output of a reducer is fed into what?
+
+---
+
+## Decision Tree
+
+  + What table can we create from the verification results to understand
+    performance of our model?
+  + For supervised learning, what is required to train a model?
+  + What is a naive way to optimize precision?
+  + Recall?
+  + Assuming we use all attributes to classify, what is the height of
+    our tree?
+  + What are we optimizing for in the leaf nodes?
+
+---
+
+## Naive Bayes
+
+  + Where does the testing set come from?
+  + What is the ```k``` in k-fold cross-validation?
+  + Bayes theorem finds P(A|B). In email spam detection, what are A and B?
+  + What is the Naive assumption we make in Naive Bayes?
+  + Why can training many models be useful?
+  + What is bootstrap sampling?
+  + What is a random forest?
+
+---
+
+## SVM
+
+  + When finding a linear fit for home prices, what is our fitness function?
+  + What is the gradient in gradient descent?
+  + In the general case, are you guaranteed to find the globally optimal
+    solution when using gradient descent?
+  + Why does SVM work so well in practice, even though it requires linear
+    separability?
+  + If your data is not linearly separable, can you use SVM?
+
+---
+
+## Neural Networks
+
+  + What is model variance?
+  + What problem does high model variance indicate?
+  + What is an activation function?
+  + What types of problems are neural networks especially suited for?
+  + What are we improving during backward propagation?
+
+---
+
+## Partitioning Clusters
+
+  + What is the difference between k-means and k-medoids?
+  + What are some of the problems with k-means?
+  + Why is normalization especially useful in clustering?
+  + What are the tradeoffs for using k-medoid clustering?
+
+---
+
+## Hierarchical Clustering
+
+  + What are the options to calculate cluster distance?
+  + Describe how to draw a dendrogram
+  + What are the drawbacks to density clustering with DBSCAN?
+  + If you had movie description data, but no genres, would you use Fuzzy
+    Clustering or Partitioned Clustering?
+  + How can we evaluate a clustering algorithm if our data is already labeled
+    with clusters?
+
+---
+
+#  *Good Luck!*
 
     </textarea>
     <script src="production/remark-0.5.9.min.js" type="text/javascript">

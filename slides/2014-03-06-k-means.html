@@ -153,7 +153,31 @@
   <body>
     <textarea id="source">
 
-<!--markdown goes here-->
+
+name: inverse
+layout: true
+class: left, top, inverse
+
+---
+
+## Implement k-means Clustering
+
+  + Very small data set
+  + Select starting centroids
+  + Find new centroids
+  + Stop after centroid moves less than ```err```
+
+---
+
+## Code
+
+  + ```code/k_means.py```
+  + ```zip``` combine lists by alternating members
+
+```python
+>>> zip([1,2,3], ['one', 'two', 'three'])
+[(1, 'one'), (2, 'two'), (3, 'three')]
+```
 
     </textarea>
     <script src="production/remark-0.5.9.min.js" type="text/javascript">
