@@ -1,0 +1,33 @@
+5.
+ETL stands for "Extract", Transform, and Load
+
+6.
+Transaction table should have attribute: Time ID, hour, week, quarter, etc.
+
+7.3
+Dice: it produces a sub-cube by allowing the analyst to pick multiple values of specific dimension.
+
+8.
+1. prepare training data
+5. set aside hold-out set
+2. teach classifier
+6. save model parameters
+7. verification with testing data
+4. input unlabeled new data into model
+3. output guesses on new data
+
+
+11.
+learning rate is too high.
+
+
+12.
+limit the number of iteration.
+set a threshold between current and previous iteration.
+
+
+16.
+order doesn't matter in sets.
+'the' and 'midterm' are in common.
+therefore, 2/7
+
